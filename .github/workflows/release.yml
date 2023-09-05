@@ -26,7 +26,7 @@ jobs:
       notes: ${{ steps.dry-run.outputs.new_release_notes }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -80,7 +80,7 @@ jobs:
           version: v0.15.0
 
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Golang
         uses: actions/setup-go@v4
@@ -148,7 +148,7 @@ jobs:
           - { goos: windows, goarch: riscv64 }
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: repository
 
@@ -272,7 +272,7 @@ jobs:
       prerelease: ${{ steps.inspect.outputs.prerelease }}
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: repository
           persist-credentials: false
@@ -355,7 +355,7 @@ jobs:
           git config --global user.email '${{ env.COMMIT_EMAIL }}'
 
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: repository
       
